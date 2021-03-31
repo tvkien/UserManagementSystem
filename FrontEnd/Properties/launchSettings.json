@@ -11,7 +11,7 @@
     "ReactApplication": {
       "commandName": "Project",
       "launchBrowser": false,
-      "applicationUrl": "https://user.kientruong.com",
+      "applicationUrl": "https://usermanagementsystem.com",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

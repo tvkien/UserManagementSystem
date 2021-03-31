@@ -22,7 +22,7 @@ namespace FrontEnd.Controllers
             try
             {
                 var url = await gatewayService.BuildUrlAsync(apiName, endpoint);
-                var response = await gatewayService.RequestAsync<object>(url);
+                var response = await gatewayService.RequestAsync<object>(apiName, url);
                 return new JsonResult(response);
             }
             catch(Exception ex)
@@ -37,7 +37,7 @@ namespace FrontEnd.Controllers
             try
             {
                 var url = await gatewayService.BuildUrlAsync(apiName, endpoint);
-                var response = await gatewayService.RequestAsync<object>(url);
+                var response = await gatewayService.RequestAsync<object>(apiName, url);
                 return new JsonResult(response);
             }
             catch (Exception ex)
@@ -52,7 +52,7 @@ namespace FrontEnd.Controllers
             try
             {
                 var url = await gatewayService.BuildUrlAsync(apiName, endpoint);
-                var response = await gatewayService.RequestAsync<object>(url);
+                var response = await gatewayService.RequestAsync<object>(apiName, url);
                 return new JsonResult(response);
             }
             catch (Exception ex)
@@ -67,7 +67,7 @@ namespace FrontEnd.Controllers
             try
             {
                 var url = await gatewayService.BuildUrlAsync(apiName, endpoint);
-                var response = await gatewayService.RequestAsync<object>(url);
+                var response = await gatewayService.RequestAsync<object>(apiName, url);
                 return new JsonResult(response);
             }
             catch (Exception ex)

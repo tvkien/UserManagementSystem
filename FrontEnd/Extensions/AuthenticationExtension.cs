@@ -47,18 +47,9 @@ namespace FrontEnd.Extensions
                 options.Cookie.HttpOnly = false;
                 options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
                 options.Cookie.SameSite = SameSiteMode.Lax;
-                //options.Cookie.MaxAge = new TimeSpan(7, 0, 0, 0);
-                //options.Cookie.Expiration = TimeSpan.FromMinutes(cookieSetting.CookieExpiration);
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(cookieSetting.CookieExpiration);
                 options.SlidingExpiration = false;
             });
-        }
-
-        public static TModel GetOptions<TModel>(this IConfiguration configuration, string section) where TModel : new()
-        {
-            var model = new TModel();
-            configuration.GetSection(section).Bind(model);
-            return model;
         }
 
         public static async Task OnTokenResponseReceived(TokenResponseReceivedContext context)
@@ -67,18 +58,18 @@ namespace FrontEnd.Extensions
             {
                 try
                 {
-                    var idtoken = context.TokenEndpointResponse.IdToken;
+                    //var idtoken = context.TokenEndpointResponse.IdToken;
 
-                    var app = ConfidentialClientApplicationBuilder
-                    .Create("408265f7-bc76-4e92-aadc-57da299f2e67")
-                    .WithTenantId("a767d94a-c314-4b42-a484-da44a9cbd277")
-                    .WithClientSecret("P5Bi.GEP8.g_2zOdK-P.H6ykH01q5f85pK")
-                    .Build();
-                    //var scopes = new string[] { "api://a9bd8516-7d86-45e1-8a0b-f79fd8b1c3a3/.default" };
-                    var scopes = new string[] { "a9bd8516-7d86-45e1-8a0b-f79fd8b1c3a3" };
-                    var userAssertion = new UserAssertion(idtoken);
-                    var result = await app.AcquireTokenOnBehalfOf(scopes, userAssertion).ExecuteAsync();
-                    var abc = result.AccessToken;
+                    //var app = ConfidentialClientApplicationBuilder
+                    //.Create("408265f7-bc76-4e92-aadc-57da299f2e67")
+                    //.WithTenantId("a767d94a-c314-4b42-a484-da44a9cbd277")
+                    //.WithClientSecret("P5Bi.GEP8.g_2zOdK-P.H6ykH01q5f85pK")
+                    //.Build();
+                    ////var scopes = new string[] { "api://a9bd8516-7d86-45e1-8a0b-f79fd8b1c3a3/.default" };
+                    //var scopes = new string[] { "a9bd8516-7d86-45e1-8a0b-f79fd8b1c3a3" };
+                    //var userAssertion = new UserAssertion(idtoken);
+                    //var result = await app.AcquireTokenOnBehalfOf(scopes, userAssertion).ExecuteAsync();
+                    //var abc = result.AccessToken;
                 }
                 catch(Exception ex)
                 {

@@ -15,7 +15,7 @@ namespace FrontEnd
                     {
                         opt.ListenAnyIP(443, listenOpt =>
                         {
-                            listenOpt.UseHttps(@"D:\Certificates\applicationlocal.pfx", "12345678");
+                            listenOpt.UseHttps(@"D:\Certificates\usermanagementsystem.com.pfx", "12345678");
                         });
                     });
                     webBuilder.UseStartup<Startup>();

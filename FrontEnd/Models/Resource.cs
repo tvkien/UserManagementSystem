@@ -7,5 +7,7 @@
         public string Uri { get; set; }
 
         public string TargetClientId { get; set; }
+
+        public string[] Scopes => new string[] { $"api://{TargetClientId.Trim()}/.default" };
     }
 }
