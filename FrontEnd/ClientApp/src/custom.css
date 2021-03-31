@@ -1,0 +1,146 @@
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+code {
+  color: #E01A76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.header{
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0px;
+  top: 0px;
+  background: #263F7B;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.article{
+  margin-top: 100px;
+}
+
+.footer{
+  color: #4b5366;
+  font-size: 14px;
+  line-height: 2px;
+  border-top: solid 1px #c3c6cc;
+  min-height: 40px;
+  max-height: 40px;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5rem;
+  background-color: blue;
+  position: fixed;
+}
+
+.userInput{
+  padding-bottom: 15px;
+}
+
+.margin-button{
+  margin-left: 10px;
+}
+
+.center .top-left-0-2-3 {
+  left: 40%;
+}
+
+form.searchUser{
+  float: right;
+}
+
+form.searchUser input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 80%;
+  background: #f1f1f1;
+  display: inline;
+}
+
+form.searchUser button {
+  width: 20%;
+  padding: 9px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.searchUser::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.modal-danger{
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+
+.header-menu{
+  margin: 0 auto;
+  width: 1110px;
+}
+.nav-container {
+  position: fixed;
+  left: 0;
+  background-color: #1d1919;
+  width: 300px;
+  top: 0;
+  height: 100vh;
+  color: white;
+  z-index: 100;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+  
+}
+.img-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.list-menu {
+  list-style-type: none;
+}
+.list-menu li {
+  padding: 10px;
+  font-size: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.list-menu li:hover {
+  color: yellow;
+}
+.sub-menu {
+  display:none;
+  list-style-type: none;
+}
+#page-list:hover .sub-menu{
+  display:block;
+}
+.custom-link {
+  color: #fff !important;
+}
+.custom-link:hover {
+  color: yellow !important;
+  text-decoration: yellow !important;
+}
